@@ -32,9 +32,11 @@ public static Node detectloop(Node head){  //function to detect the loop
     }
     else{             //if we found slow == fast that means we detect the cycle
       slow = head;     //then make slow =head and let fat be at the meeting point don't change it
-      while(slow != fast){ //Now untill you reach to the node from where the cycle started keep traversing
+      while(slow != fast)
+      { //Now untill you reach to the node from where the cycle started keep traversing
         slow =slow.next;  // so move slow to  one node ahead 
-        fast = fast.next; // move fast to one node ahead 
+        fast = fast.next; // move fast to one node ahead
+
       }
     }return slow;  //now this is where slow==fast ..i.e we found the node from where the cycle has been started 
   }
@@ -46,8 +48,8 @@ public static Node detectloop(Node head){  //function to detect the loop
           System.out.print(k.data+ " ");   //print the data part 
           k = k.next;  //node by node
       }System.out.print("\n");
-      }
-
+    }
+    
     public static void main(String[] args){
      
      Node head = new Node();
